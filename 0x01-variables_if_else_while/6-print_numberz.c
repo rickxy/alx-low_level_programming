@@ -5,7 +5,6 @@
  * followed by a new line, using putchar
  * Return: Always 0 (Success)
  */
- 
 int main(void)
 {
 	int n;
