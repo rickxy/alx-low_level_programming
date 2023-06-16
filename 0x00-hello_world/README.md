@@ -1,4 +1,3 @@
-[ALX C Programming project]![image](https://user-images.githubusercontent.com/105258746/189208480-2fccc610-22af-4ed9-8928-2ebf0e99b002.png)
 
 # C PROGRAMMING `0x00. C - Hello, World`
 
