@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * clear_bit_at_index - Clears the value of a bit at a specified index.
- * @number_ptr: A pointer to the number to modify.
- * @bit_index: The index of the bit to clear.
+ * clear_bit - Clears the value of a bit at a given index.
+ * @n: A pointer to the number to clear.
+ * @index: The index to clear.
  *
- * Return: If an error occurs - -1.
- *         Otherwise - 1.
+ * Return: If an error occurred - -1.
+ *		 Otherwise - 1.
  */
-int clear_bit_at_index(unsigned long int *number_ptr, unsigned int bit_index)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
-    if (bit_index >= (sizeof(*number_ptr) * 8))
-        return (-1);
+	if (index >= (sizeof(*n) * 8))
+		return (-1);
 
-    *number_ptr &= ~(1UL << bit_index);
+	*n &= ~(1UL << index);
 
-    return (1);
+	return (1);
 }

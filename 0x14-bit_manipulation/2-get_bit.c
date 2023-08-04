@@ -1,17 +1,17 @@
 #include "main.h"
 
 /**
- * obtain_bit_value - Returns the value of a bit at a specified index.
- * @number: The number to check.
- * @bit_index: The index of the bit to retrieve.
+ * get_bit - Returns the value of a bit at a given index.
+ * @n: The number to check.
+ * @index: The index to check.
  *
- * Return: If an error occurs - -1.
- *         Otherwise - the value of the bit at the given index.
+ * Return: If an error occurred - -1.
+ *		 Otherwise - the value of bit at index.
  */
-int obtain_bit_value(unsigned long int number, unsigned int bit_index)
+int get_bit(unsigned long int n, unsigned int index)
 {
-    if (bit_index >= (sizeof(number) * 8))
-        return (-1);
+	if (index >= (sizeof(n) * 8))
+		return (-1);
 
-    return ((number >> bit_index) & 1);
+	return ((n >> index) & 1);
 }

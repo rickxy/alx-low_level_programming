@@ -2,29 +2,29 @@
 #include <stddef.h>
 
 /**
- * bin_str_to_uint - Converts a binary string to an unsigned int.
- * @binary_str: String containing binary digits (0 and 1)
+ * binary_to_uint - Converts a binary number to an unsigned int.
+ * @b: String of 0 and 1 chars
  *
- * Return: The converted unsigned int value, or
- *         0 if there is one or more invalid characters in the string
- *         or if the input string is NULL
+ * Return: Converted number, or
+ *         0 if there is one or more chars in the string b that is not 0 or 1
+ *         or if b is NULL
  */
-unsigned int bin_str_to_uint(const char *binary_str)
+unsigned int binary_to_uint(const char *b)
 {
-    unsigned int result = 0;
+	unsigned int num = 0;
 
-    if (binary_str == NULL)
-        return 0;
+	if (b == NULL)
+		return (0);
 
-    while (*binary_str)
-    {
-        result <<= 1;
-        if (*binary_str == '1')
-            result += 1;
-        else if (*binary_str != '0')
-            return 0;
-        binary_str++;
-    }
+	while (*b)
+	{
+		num <<= 1;
+		if (*b == '1')
+			num += 1;
+		else if (*b != '0')
+			return (0);
+		b++;
+	}
 
-    return result;
+	return (num);
 }
