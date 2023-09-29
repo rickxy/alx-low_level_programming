@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * binary_printer - Outputs the binary form of a given number.
- * @num: The numerical value to be displayed in binary.
+ * print_binary - Display the binary form of a given number.
+ * @n: The input number to be shown in binary.
  */
-void binary_printer(unsigned long int num)
+void print_binary(unsigned long int n)
 {
-    if (num > 1)
-        binary_printer(num >> 1);
+    if (n > 1)
+        print_binary(n >> 1);
 
-    putchar((num & 1) + '0');
+    _putchar((n & 1) + '0');
 }
