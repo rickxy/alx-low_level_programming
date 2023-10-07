@@ -9,7 +9,6 @@
  * @to: pointer to the destination file descriptor
  * @argv: array of arguments
  */
- 
 void handle_opening_files(int *from, int *to, char **argv)
 {
 	*from = open(argv[1], O_RDONLY);

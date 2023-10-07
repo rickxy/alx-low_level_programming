@@ -10,7 +10,6 @@
  *		 filename is NULL, or write fails or does not write
  *		 the expected amount of bytes.
  */
- 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;

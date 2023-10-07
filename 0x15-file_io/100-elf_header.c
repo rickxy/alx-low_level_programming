@@ -10,7 +10,6 @@
  * Description: If the file is not an ELF file, the function prints an error
  * and exits.
  */
- 
 void check_elf_header(unsigned char *e_ident)
 {
 	int index;
